@@ -1,0 +1,24 @@
+{
+  "qianhui": {
+    "name": "Qian Hui Liong",
+    "title": "Data",
+    "company": "SL",
+    "phone": "60143986456",
+    "email": "qianhuistudyarea@gmail.com",
+    "whatsapp": "60143986456",
+    "website": "None",
+    "photo": "images/qianhui.png",
+    "vcf": "contacts/qianhui.vcf"
+  },
+  "jared": {
+    "name": "Jared Low",
+    "title": "CFO",
+    "company": "SL",
+    "phone": "60167358581",
+    "email": "iuhiuhnaiqoaij@gmailcom",
+    "whatsapp": "60167358581",
+    "website": "None",
+    "photo": "images/jared.png",
+    "vcf": "contacts/jared.vcf"
+  }
+}
