@@ -13,3 +13,5 @@ echo Deploy Completed
 echo =====================
 
 pause
+@REM .\deploy.bat
+@REM use this to run in terminal for this .bat file
