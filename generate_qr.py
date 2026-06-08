@@ -1,7 +1,7 @@
 import qrcode
 from pathlib import Path
 
-base_url = "https://senglienamecard.netlify.app"
+base_url = "https://athenall.github.io/enamecard/"
 
 people = ["qianhui", "jared"]
 
