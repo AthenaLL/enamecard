@@ -20,5 +20,16 @@
     "website": "None",
     "photo": "images/jared.png",
     "vcf": "contacts/jared.vcf"
+  },
+  "kelly": {
+    "name": "Kelly Chan",
+    "title": "AP",
+    "company": "SL",
+    "phone": "60167278456",
+    "email": "annielss62@gmail.com",
+    "whatsapp": "60167278456",
+    "website": "None",
+    "photo": "images/kelly.png",
+    "vcf": "contacts/kelly.vcf"
   }
 }
