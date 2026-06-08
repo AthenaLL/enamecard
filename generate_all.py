@@ -11,6 +11,8 @@ EXCEL_FILE = "staff.xlsx"
 SHEET_NAME = "staff"
 
 BASE_URL = "https://athenall.github.io/enamecard"
+# BASE_URL = "https://www.sengli.com.my"
+
 
 PEOPLE_JSON = "people.json"
 
