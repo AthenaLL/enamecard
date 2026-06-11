@@ -2,7 +2,7 @@
   "qianhui": {
     "name": "Qian Hui Liong",
     "title": "Data",
-    "company": "SL",
+    "company": "SENG LI MARKETING SDN BHD",
     "phone": "60143986456",
     "email": "qianhuistudyarea@gmail.com",
     "whatsapp": "60143986456",
@@ -13,23 +13,34 @@
   "jared": {
     "name": "Jared Low",
     "title": "CFO",
-    "company": "SL",
-    "phone": "60167358581",
-    "email": "iuhiuhnaiqoaij@gmail.com",
-    "whatsapp": "60167358581",
+    "company": "SENG LI MARKETING SDN BHD",
+    "phone": "60107608581",
+    "email": "jaredlow@sengli.com.my",
+    "whatsapp": "60107608581",
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/jared.png",
     "vcf": "contacts/jared.vcf"
   },
   "kelly": {
     "name": "Kelly Chan",
-    "title": "AP",
-    "company": "SL",
-    "phone": "60167278456",
-    "email": "annielss62@gmail.com",
-    "whatsapp": "60167278456",
+    "title": "Account (AP)",
+    "company": "SENG LI MARKETING SDN BHD",
+    "phone": "60167388581",
+    "email": "info@sengli.com.my",
+    "whatsapp": "60167388581",
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/kelly.png",
     "vcf": "contacts/kelly.vcf"
+  },
+  "man": {
+    "name": "Lee Man Man",
+    "title": "Admin Manager",
+    "company": "SENG LI MARKETING SDN BHD",
+    "phone": "60129228661",
+    "email": "man858100@gmail",
+    "whatsapp": "60129228661",
+    "website": "https://www.sengli.com.my/mobile/home",
+    "photo": "images/man.png",
+    "vcf": "contacts/man.vcf"
   }
 }

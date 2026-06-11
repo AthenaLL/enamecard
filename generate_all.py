@@ -10,10 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 EXCEL_FILE = "staff.xlsx"
 SHEET_NAME = "staff"
 
-# BASE_URL = "https://athenall.github.io/enamecard"
 BASE_URL = "https://enamecard-one.vercel.app"
-# BASE_URL = "https://www.sengli.com.my"
-
 
 PEOPLE_JSON = "people.json"
 
@@ -24,7 +21,6 @@ DESIGNED_QR_DIR = Path("designed_qr")
 CONTACT_DIR.mkdir(exist_ok=True)
 QR_DIR.mkdir(exist_ok=True)
 DESIGNED_QR_DIR.mkdir(exist_ok=True)
-
 
 # =========================
 # READ EXCEL
@@ -96,74 +92,166 @@ END:VCARD
     qr.add_data(url)
     qr.make(fit=True)
 
-    qr_img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+    qr_img = qr.make_image(
+        fill_color="black",
+        back_color="white"
+    ).convert("RGB")
+
     qr_img.save(QR_DIR / f"{person_id}.png")
 
     # =========================
     # GENERATE DESIGNED QR CARD
     # =========================
-    card_width = 900
-    card_height = 1300
+    card_width = 1300
+    card_height = 800
 
     card = Image.new("RGB", (card_width, card_height), "#000000")
     draw = ImageDraw.Draw(card)
 
-    # Yellow border
+    # =========================
+    # BORDER
+    # =========================
     draw.rounded_rectangle(
-        [40, 40, card_width - 40, card_height - 40],
-        radius=40,
+        [35, 35, card_width - 35, card_height - 35],
+        radius=45,
         outline="#FFD700",
-        width=6
+        width=7
     )
 
-    # Title text
+    # =========================
+    # LOGO
+    # =========================
+    logo_path = r"C:\Users\itdep\OneDrive\Documents\Qian\ENameCard\1668754061_logotoppanelv2sengli.png"
+
     try:
-        font_name = ImageFont.truetype("arial.ttf", 60)
-        font_title = ImageFont.truetype("arial.ttf", 36)
-        font_small = ImageFont.truetype("arial.ttf", 30)
+        logo = Image.open(logo_path).convert("RGBA")
+
+        logo_max_width = 430
+        logo_max_height = 150
+
+        logo.thumbnail(
+            (logo_max_width, logo_max_height),
+            Image.LANCZOS
+        )
+
+        card.paste(
+            logo,
+            (105, 80),
+            logo
+        )
+
+    except Exception as e:
+        print(f"Logo error: {e}")
+
+    # =========================
+    # FONTS
+    # =========================
+    try:
+        font_name = ImageFont.truetype("arialbd.ttf", 76)
+        font_title = ImageFont.truetype("arialbd.ttf", 46)
+        font_company = ImageFont.truetype("arial.ttf", 34)
     except:
         font_name = ImageFont.load_default()
         font_title = ImageFont.load_default()
-        font_small = ImageFont.load_default()
+        font_company = ImageFont.load_default()
 
-    draw.text((card_width / 2, 150), name, fill="#FFD700", font=font_name, anchor="mm")
-    draw.text((card_width / 2, 230), title, fill="white", font=font_title, anchor="mm")
-    draw.text((card_width / 2, 290), company, fill="white", font=font_small, anchor="mm")
+    # =========================
+    # CONTENT POSITION
+    # =========================
+    content_center_y = 480
 
-    # QR position
-    qr_size = 520
-    qr_resized = qr_img.resize((qr_size, qr_size))
+    # =========================
+    # QR
+    # =========================
+    qr_size = 250
+    qr_padding = 30
 
-    qr_x = (card_width - qr_size) // 2
-    qr_y = 420
+    qr_resized = qr_img.resize(
+        (qr_size, qr_size),
+        Image.LANCZOS
+    )
 
-    # White QR background
+    qr_x = 880
+    qr_y = int(content_center_y - qr_size / 2)
+
     draw.rounded_rectangle(
-        [qr_x - 30, qr_y - 30, qr_x + qr_size + 30, qr_y + qr_size + 30],
-        radius=30,
+        [
+            qr_x - qr_padding,
+            qr_y - qr_padding,
+            qr_x + qr_size + qr_padding,
+            qr_y + qr_size + qr_padding
+        ],
+        radius=28,
         fill="white"
     )
 
-    card.paste(qr_resized, (qr_x, qr_y))
+    card.paste(
+        qr_resized,
+        (qr_x, qr_y)
+    )
 
-    # # Footer
-    # draw.text(
-    #     (card_width / 2, 1040),
-    #     "Scan to save my contact",
-    #     fill="#FFD700",
-    #     font=font_title,
-    #     anchor="mm"
-    # )
+    # =========================
+    # LEFT TEXT
+    # =========================
+    left_x = 115
 
-    # draw.text(
-    #     (card_width / 2, 1110),
-    #     url,
-    #     fill="white",
-    #     font=font_small,
-    #     anchor="mm"
-    # )
+    line_name = 95
+    line_title = 75
+    line_company = 65
 
-    card.save(DESIGNED_QR_DIR / f"{person_id}_enamecard.png")
+    total_text_height = line_name + line_title + line_company
+
+    text_margin_top = 20
+
+    text_start_y = (
+        content_center_y
+        - total_text_height / 2
+        + text_margin_top
+    )
+
+    draw.text(
+        (left_x, text_start_y),
+        name,
+        fill="#FFD700",
+        font=font_name,
+        anchor="lm"
+    )
+
+    draw.text(
+        (left_x, text_start_y + line_name),
+        title,
+        fill="white",
+        font=font_title,
+        anchor="lm"
+    )
+
+    draw.text(
+        (left_x, text_start_y + line_name + line_title),
+        company,
+        fill="white",
+        font=font_company,
+        anchor="lm"
+    )
+
+    # =========================
+    # VERTICAL LINE
+    # =========================
+    line_x = 730
+    line_top = int(content_center_y - 145)
+    line_bottom = int(content_center_y + 145)
+
+    draw.line(
+        [(line_x, line_top), (line_x, line_bottom)],
+        fill="#FFD700",
+        width=5
+    )
+
+    # =========================
+    # SAVE DESIGNED CARD
+    # =========================
+    card.save(
+        DESIGNED_QR_DIR / f"{person_id}_enamecard.png"
+    )
 
 # =========================
 # EXPORT people.json

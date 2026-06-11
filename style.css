@@ -16,8 +16,28 @@ body{
     border-radius:18px;
     text-align:center;
     box-shadow:0 4px 20px rgba(255,255,255,0.12);
+
+    position:relative;
 }
 
+.company-logo{
+    position:absolute;
+
+    top:2px;
+    left:10px;
+
+    width:80px;
+    height:auto;
+
+    object-fit:contain;
+}
+
+/* .company-logo{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:60px;
+} */
 img{
     width:35%;
     max-width:150px;
