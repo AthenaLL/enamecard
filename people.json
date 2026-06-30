@@ -42,5 +42,16 @@
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/man.png",
     "vcf": "contacts/man.vcf"
+  },
+  "shawn": {
+    "name": "Shawn Lee",
+    "title": "CIO",
+    "company": "SENG LI MARKETING SDN BHD",
+    "phone": "60167738581",
+    "email": "shawnlee@sengli.com.my",
+    "whatsapp": "60167738581",
+    "website": "https://www.sengli.com.my/mobile/home",
+    "photo": "images/shawn.png",
+    "vcf": "contacts/shawn.vcf"
   }
 }
