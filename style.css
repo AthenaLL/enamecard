@@ -1,5 +1,13 @@
+@font-face{
+    font-family:"Ethnocentric Rg";
+    src:url("fonts/EthnocentricRg.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
 body{
-    background:#000000;
+    background:#050505;
     font-family:Arial, sans-serif;
     margin:0;
     padding:30px;
@@ -11,39 +19,129 @@ body{
     max-width:400px;
     margin:auto;
     margin-top:30px;
-    background:#111111;
+    background:
+        radial-gradient(circle at 78% 22%, rgba(242, 197, 23, 0.08), transparent 28%),
+        linear-gradient(145deg, #111111 0%, #050505 100%);
     padding:25px;
-    border-radius:18px;
+    border:0;
+    border-radius:8px;
     text-align:center;
-    box-shadow:0 4px 20px rgba(255,255,255,0.12);
-
+    box-shadow:0 4px 24px rgba(242,197,23,0.18);
     position:relative;
+    overflow:hidden;
 }
 
 .company-logo{
     position:absolute;
-
-    top:2px;
-    left:10px;
-
-    width:80px;
+    top:18px;
+    left:54px;
+    width:108px;
     height:auto;
-
     object-fit:contain;
 }
 
-/* .company-logo{
+.brand-rail{
     position:absolute;
-    top:12px;
-    right:12px;
-    width:60px;
-} */
+    top:0;
+    left:18px;
+    width:28px;
+    height:100%;
+    border-right:3px solid #F2C517;
+}
+
+.brand-rail::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:3px;
+    height:96px;
+    background:#F2C517;
+    box-shadow:0 138px 0 #F2C517, 0 276px 0 #F2C517, 0 414px 0 #F2C517;
+}
+
+.brand-rail::after{
+    content:"";
+    position:absolute;
+    top:96px;
+    left:0;
+    width:31px;
+    height:3px;
+    background:#050505;
+    border-top:3px solid #F2C517;
+    transform:skewY(38deg);
+    transform-origin:left center;
+}
+
 img{
     width:35%;
     max-width:150px;
     aspect-ratio:1;
     object-fit:cover;
     border-radius:50%;
+    margin-top:42px;
+    border:2px solid rgba(242,197,23,0.7);
+}
+
+h1,
+h3,
+.registration-no,
+.company-info summary{
+    font-family:"Ethnocentric Rg","Ethnocentric","Arial Black",Arial,sans-serif;
+    letter-spacing:0;
+}
+
+h1{
+    color:#F2C517;
+    font-size:28px;
+    margin:18px 0 8px;
+}
+
+h3{
+    color:#FFFFFF;
+    font-size:16px;
+    margin:0 0 8px;
+}
+
+p{
+    margin:0 0 14px;
+}
+
+.registration-no{
+    color:#FFFFFF;
+    font-size:10px;
+    margin:0 0 16px;
+}
+
+.card-link-wrap{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    margin:12px 0 16px;
+    padding:10px;
+    border:1px solid rgba(242,197,23,0.35);
+    border-radius:8px;
+    background:rgba(0,0,0,0.45);
+}
+
+#cardUrl{
+    min-width:0;
+    flex:1;
+    color:#F2C517;
+    font-size:12px;
+    text-align:left;
+    overflow-wrap:anywhere;
+}
+
+button{
+    border:0;
+    background:#F2C517;
+    color:#000000;
+    border-radius:6px;
+    padding:9px 10px;
+    font-weight:bold;
+    cursor:pointer;
+    white-space:nowrap;
 }
 
 a{
@@ -54,16 +152,39 @@ a{
     padding:14px;
     margin:10px 0 ;
 
-    background:#FFD700;
+    background:#F2C517;
     color:#000000;
 
     text-decoration:none;
-    border-radius:8px;
+    border-radius:6px;
     font-weight:bold;
 }
 
 a:hover{
-    background:#FFC300;
+    background:#F2C517;
+}
+
+.company-info{
+    margin:16px 0 0;
+    color:#BEBEBE;
+    font-size:11px;
+    line-height:1.5;
+    text-align:left;
+}
+
+.company-info summary{
+    color:#F2C517;
+    cursor:pointer;
+    font-size:12px;
+    margin-bottom:8px;
+}
+
+.company-info p{
+    margin:0 0 6px;
+}
+
+.info-label{
+    color:#F2C517;
 }
 
 @media screen and (max-width: 768px){
@@ -75,10 +196,11 @@ a:hover{
     .card{
         width:100%;
         padding:20px;
+        box-sizing:border-box;
     }
 
     h1{
-        font-size:24px;
+        font-size:22px;
     }
 
     h3{
@@ -92,6 +214,16 @@ a:hover{
     a{
         padding:16px;
         font-size:16px;
+    }
+
+    .company-logo{
+        left:50px;
+        width:98px;
+    }
+
+    .card-link-wrap{
+        align-items:stretch;
+        flex-direction:column;
     }
 
 }

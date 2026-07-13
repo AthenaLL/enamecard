@@ -1,6 +1,6 @@
 {
   "qianhui": {
-    "name": "Qian Hui Liong",
+    "name": "Liong Qian Hui Nicolle",
     "title": "Data",
     "company": "SENG LI MARKETING SDN BHD",
     "phone": "60143986456",
@@ -8,10 +8,11 @@
     "whatsapp": "60143986456",
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/qianhui.png",
-    "vcf": "contacts/qianhui.vcf"
+    "vcf": "contacts/qianhui.vcf",
+    "url": "https://enamecard-one.vercel.app/?id=qianhui"
   },
   "jared": {
-    "name": "Jared Low",
+    "name": "Jared Low Liang Shen",
     "title": "CFO",
     "company": "SENG LI MARKETING SDN BHD",
     "phone": "60107608581",
@@ -19,10 +20,11 @@
     "whatsapp": "60107608581",
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/jared.png",
-    "vcf": "contacts/jared.vcf"
+    "vcf": "contacts/jared.vcf",
+    "url": "https://enamecard-one.vercel.app/?id=jared"
   },
   "kelly": {
-    "name": "Kelly Chan",
+    "name": "Kelly Chan Khe Lee",
     "title": "Account (AP)",
     "company": "SENG LI MARKETING SDN BHD",
     "phone": "60167388581",
@@ -30,7 +32,8 @@
     "whatsapp": "60167388581",
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/kelly.png",
-    "vcf": "contacts/kelly.vcf"
+    "vcf": "contacts/kelly.vcf",
+    "url": "https://enamecard-one.vercel.app/?id=kelly"
   },
   "man": {
     "name": "Lee Man Man",
@@ -41,17 +44,19 @@
     "whatsapp": "60129228661",
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/man.png",
-    "vcf": "contacts/man.vcf"
+    "vcf": "contacts/man.vcf",
+    "url": "https://enamecard-one.vercel.app/?id=man"
   },
   "shawn": {
-    "name": "Shawn Lee",
-    "title": "CIO",
+    "name": "Lee Ah Seng (Shawn)",
+    "title": "Director",
     "company": "SENG LI MARKETING SDN BHD",
     "phone": "60167738581",
     "email": "shawnlee@sengli.com.my",
     "whatsapp": "60167738581",
     "website": "https://www.sengli.com.my/mobile/home",
     "photo": "images/shawn.png",
-    "vcf": "contacts/shawn.vcf"
+    "vcf": "contacts/shawn.vcf",
+    "url": "https://enamecard-one.vercel.app/?id=shawn"
   }
 }

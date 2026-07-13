@@ -1,7 +1,7 @@
 import qrcode
 from pathlib import Path
 
-base_url = "https://athenall.github.io/enamecard/"
+base_url = "https://enamecard-one.vercel.app"
 
 people = ["qianhui", "jared"]
 
