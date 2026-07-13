@@ -19,7 +19,10 @@ fetch('people.json')
     document.getElementById("company").innerText = person.company;
     document.getElementById("photo").src = person.photo;
     document.getElementById("photo").alt = person.name;
-    document.getElementById("cardUrl").innerText = cardUrl;
+    const cardUrlElement = document.getElementById("cardUrl");
+    if (cardUrlElement) {
+        cardUrlElement.innerText = cardUrl;
+    }
 
     document.getElementById("callBtn").href = "tel:+" + person.phone;
     document.getElementById("waBtn").href = "https://wa.me/" + person.whatsapp;
@@ -27,16 +30,19 @@ fetch('people.json')
     document.getElementById("websiteBtn").href = person.website;
     document.getElementById("contactBtn").href = person.vcf;
 
-    document.getElementById("copyLinkBtn").addEventListener("click", async () => {
-        try {
-            await navigator.clipboard.writeText(cardUrl);
-            document.getElementById("copyLinkBtn").innerText = "Copied";
-            setTimeout(() => {
-                document.getElementById("copyLinkBtn").innerText = "Copy Link";
-            }, 1600);
-        } catch (error) {
-            window.prompt("Copy this e-name card URL:", cardUrl);
-        }
-    });
+    const copyLinkButton = document.getElementById("copyLinkBtn");
+    if (copyLinkButton) {
+        copyLinkButton.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(cardUrl);
+                copyLinkButton.innerText = "Copied";
+                setTimeout(() => {
+                    copyLinkButton.innerText = "Copy Link";
+                }, 1600);
+            } catch (error) {
+                window.prompt("Copy this e-name card URL:", cardUrl);
+            }
+        });
+    }
 
 });

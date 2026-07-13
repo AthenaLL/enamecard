@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E Name Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card">
+<main class="card">
 
     <!-- <div class="brand-rail" aria-hidden="true"></div> -->
 
-    <img src="images/company_logo.png" class="company-logo" alt="Seng Li">
-    
-    <img id="photo" alt="">
+    <header class="identity-header">
+        <img src="images/company_logo.png" class="company-logo" alt="Seng Li">
+
+        <div class="photo-frame">
+            <img id="photo" alt="">
+        </div>
+    </header>
 
     <h1 id="name"></h1>
 
@@ -29,15 +36,17 @@
         <!-- <button id="copyLinkBtn" type="button">Copy Link</button> -->
     <!-- </div> -->
     
-    <a id="callBtn">📞 Call</a>
+    <nav class="contact-actions" aria-label="Contact options">
+        <a id="callBtn">Call</a>
 
-    <a id="waBtn">💬 WhatsApp</a>
+        <a id="waBtn">WhatsApp</a>
 
-    <a id="emailBtn">✉ Email</a>
+        <a id="emailBtn">Email</a>
 
-    <a id="websiteBtn">🌐 Website</a>
+        <a id="websiteBtn">Website</a>
 
-    <a id="contactBtn">➕ Add Contact</a>
+        <a id="contactBtn">Add Contact</a>
+    </nav>
 
     <!-- <details class="company-info">
         <summary>Company Info</summary>
@@ -50,7 +59,7 @@
         <p><span class="info-label">Fax:</span> 07-361 5373</p>
     </details> -->
 
-</div>
+</main>
 
 <script src="script.js"></script>
 
