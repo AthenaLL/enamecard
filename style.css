@@ -94,12 +94,12 @@ body{
 
 .photo-frame{
     width:150px;
-    aspect-ratio:1;
+    aspect-ratio:1; /*永远正方     */
     padding:4px;
     border:2px solid rgba(242,197,23,0.88);
-    border-radius:50%;
+    border-radius:50%; /*变圆*/
     background:#0a0a0a;
-    box-shadow:0 0 0 5px rgba(242,197,23,0.09);
+    box-shadow:0 0 0 5px rgba(242,197,23,0.09); /*黄色外发光*/
     box-sizing:border-box;
 }
 

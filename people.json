@@ -1,7 +1,7 @@
 {
   "qianhui": {
     "name": "Liong Qian Hui Nicolle",
-    "title": "Data",
+    "title": "Data and Business Analyst",
     "company": "SENG LI MARKETING SDN BHD",
     "phone": "60143986456",
     "email": "qianhuistudyarea@gmail.com",
@@ -13,7 +13,7 @@
   },
   "jared": {
     "name": "Jared Low Liang Shen",
-    "title": "CFO",
+    "title": "Chief Financial Officer",
     "company": "SENG LI MARKETING SDN BHD",
     "phone": "60107608581",
     "email": "jaredlow@sengli.com.my",
@@ -22,18 +22,6 @@
     "photo": "images/jared.png",
     "vcf": "contacts/jared.vcf",
     "url": "https://enamecard-one.vercel.app/?id=jared"
-  },
-  "kelly": {
-    "name": "Kelly Chan Khe Lee",
-    "title": "Account (AP)",
-    "company": "SENG LI MARKETING SDN BHD",
-    "phone": "60167388581",
-    "email": "info@sengli.com.my",
-    "whatsapp": "60167388581",
-    "website": "https://www.sengli.com.my/mobile/home",
-    "photo": "images/kelly.png",
-    "vcf": "contacts/kelly.vcf",
-    "url": "https://enamecard-one.vercel.app/?id=kelly"
   },
   "man": {
     "name": "Lee Man Man",
@@ -58,5 +46,29 @@
     "photo": "images/shawn.png",
     "vcf": "contacts/shawn.vcf",
     "url": "https://enamecard-one.vercel.app/?id=shawn"
+  },
+  "stephent": {
+    "name": "Stephent Lee",
+    "title": "Chief Executive Officer",
+    "company": "SENG LI MARKETING SDN BHD",
+    "phone": "60167008581",
+    "email": "stephent8581@gmail.com",
+    "whatsapp": "60167008581",
+    "website": "https://www.sengli.com.my/mobile/home",
+    "photo": "images/stephent.png",
+    "vcf": "contacts/stephent.vcf",
+    "url": "https://enamecard-one.vercel.app/?id=stephent"
+  },
+  "lee": {
+    "name": "Lee Aik Li (Lee)",
+    "title": "Chief Operating Officer",
+    "company": "SENG LI MARKETING SDN BHD",
+    "phone": "60137698581",
+    "email": "lee@sengli.com.my",
+    "whatsapp": "60137698581",
+    "website": "https://www.sengli.com.my/mobile/home",
+    "photo": "images/lee.png",
+    "vcf": "contacts/lee.vcf",
+    "url": "https://enamecard-one.vercel.app/?id=lee"
   }
 }

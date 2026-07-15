@@ -39,7 +39,7 @@ people = {}
 whatsapp_rows = []
 
 FONT_PATH = Path(__file__).parent / "fonts" / "EthnocentricRg.ttf"
-LOGO_PATH = Path(__file__).with_name("SENG LI + 3icon.png")
+LOGO_PATH = Path(__file__).with_name("SengLi logo without any elements.png")
 RIGHT_ICON_PATH = Path(__file__).with_name("3icon.png")
 LEFT_LINE_PATH = Path(__file__).with_name("right line.png")
 WINDOWS_FONT_DIR = Path("C:/Windows/Fonts")
